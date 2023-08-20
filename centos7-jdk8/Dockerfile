@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 使用CentOS7作为基础镜像
-FROM centos:7.9.2009
+FROM centos:7
 
 # 维护人信息
 MAINTAINER iSwfe
