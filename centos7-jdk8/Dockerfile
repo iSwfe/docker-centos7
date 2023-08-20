@@ -11,7 +11,7 @@ ENV TZ=Asia/Shanghai
 
 # RPM安装JDK
 WORKDIR /root/Downloads
-RUN curl http://mirrors.huaweicloud.com/java/jdk/8u192-b12/jdk-8u192-linux-x64.rpm -o jdk8.rpm \
+RUN curl https://mirrors.huaweicloud.com/java/jdk/8u202-b08/jdk-8u202-linux-x64.rpm -o jdk8.rpm \
     && yum install -y jdk8.rpm \
     && rm -rf jdk8.rpm
 
