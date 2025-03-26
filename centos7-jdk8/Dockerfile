@@ -34,6 +34,8 @@ RUN sed -i -e '/mirrors.cloud.aliyuncs.com/d' -e '/mirrors.aliyuncs.com/d' /etc/
 RUN sed -i 's/enabled=1/enabled=0/g' /etc/yum/pluginconf.d/fastestmirror.conf
 RUN sed -i 's/plugins=1/plugins=0/g' /etc/yum.conf
 RUN yum makecache
+# 重建RPM数据库
+RUN rpm --rebuilddb
 RUN yum install -y wget telnet lsof net-tools less lrzsz unzip
 
 # 切换回工作目录到家目录
